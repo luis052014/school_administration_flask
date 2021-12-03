@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+        <form action="/update/{{student.id}}" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Name" value="{{student.name}}"class="form-control">
+                </div>
+                <div class="form-group">
+                <input type="text" name="lastname" placeholder="Lastname" value="{{student.lastname}}" class="form-control">
+                </div>
+                <div class="form-group">
+                <input type="text" name="email" placeholder="Email"  value="{{student.email}}" class="form-control">
+                </div>
+                <div class="form-group">
+                <input type="text" name="qualification" placeholder="Qualification"   value="{{student.qualification}}"class="form-control">
+                </div>
+                <div class="form-group">
+                <input type="text" name="coments" placeholder="Coments"  value="{{student.coments}}"  class="form-control">
+                </div>
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Guardar
+                </button>
+            </div>
+            </form>
+</div>
+
+{% endblock %}

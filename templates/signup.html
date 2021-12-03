@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<p>REGISTRO DE USUARIO</p>
+<div class="card card-body">
+   <form action="signup" method="POST" >
+       <div class="form-group">
+      
+         <div class="form-group">
+            <input type="username" name="username" placeholder="Nombre" class="form-control">
+            </div>
+       <div class="form-group">
+       <input type="email" name="email" placeholder="Email" class="form-control">
+       </div>
+       <div class="form-group">
+       <input type="password" name="password" placeholder="Password" class="form-control">
+       </div>
+       
+       <div class="form-group">
+       <button type="submit" class="btn btn-primary btn-block">
+           Guardar
+       </button>
+       
+    
+   </div>
+</div>
+   </form>
+</div>
+
+{% endblock %}

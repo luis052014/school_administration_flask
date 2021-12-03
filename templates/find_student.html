@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h2>Descarga de boleta</h2>
+<div class="card card-body" >
+
+<h3>Buscar alumno</h3>
+<form action="{{url_for('findstudent')}}" method="post" class="form-control">
+    <div class="form-group"></div>
+    <label for="idalumno">ID del Alumno</label>
+    <br>
+    <hr>
+    <input type="text" name="id" id="idalumno" class="form-control" placeholder="ID" >
+    </div>
+    <br>
+    <div class="form-group"></div>
+    <input type="submit" value="Buscar" class="form-control">
+    </div>
+</form>
+</div>
+
+{% endblock %}

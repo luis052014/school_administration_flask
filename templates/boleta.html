@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <title>Document</title>
+</head>
+<body>
+   
+   {% for student in student %}
+           <tr>
+               <h1>
+               <td>{{student.name}}</td>
+               <td>{{student.lastname}}</td>
+               </h1>
+               
+           </tr>
+           {% endfor %}
+           
+            <table class="table table-striped table-bordered bg-white table-sm">
+        
+                <thead>
+                    <h4>Resumen de calificaciones</h4>
+                    <tr>
+                    <th>Trimestre</th>
+                    <th>Español</th>
+                    <th>Matematicas</th>
+                    <th>Artes</th>
+                    <th>Vida saludable</th>
+                    <th>Conocimiento del medio</th>
+                    <th>Formación civica</th>
+                    <th>Educación fisica</th>
+                    <th>Promedio final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in data_student %}
+                    <tr>
+                        <td>{{student.trimester}}</td>
+                        <td>{{student.español}}</td>
+                        <td>{{student.matematicas}}</td>
+                        <td>{{student.artes}}</td>
+                        <td>{{student.vida_saludable}}</td>
+                        <td>{{student.conocimiento_del_medio}}</td>
+                        <td>{{student.formacion_civica}}</td>
+                        <td>{{student.educacion_fisica}}</td>
+                        <td>
+                            
+        
+                            
+                        </td>
+                        <td>
+                             
+                    </tr>
+                    {% endfor %}
+                    {% for prom_signature in prom_signature %}
+                   
+        
+                    <td>Promedios</td>
+        
+                    <td>{{prom_signature.0 or "0.0"}}</td>
+                    <td>{{prom_signature.1 or "0.0"}}</td>
+                    <td>{{prom_signature.2 or "0.0"}}</td>
+                    <td>{{prom_signature.3 or "0.0"}}</td>
+                    <td>{{prom_signature.4 or "0.0"}}</td>
+                    <td>{{prom_signature.5 or "0.0"}}</td>
+                    <td>{{prom_signature.6 or "0.0"}}</td>
+                    
+                    <td>
+                        {{finalprom|round(1) or 0.0}}
+                    </td>
+        
+                    {% endfor %}
+                   
+                </tbody>
+            </table>
+           
+            
+        
+        
+        
+        
+</body>
+</html>

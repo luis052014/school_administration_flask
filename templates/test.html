@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/static/bootstrap.css">
+   <title>Document</title>
+</head>
+<body>
+   <form action="/savenotes/{{student.id}}" method="POST" autocomplete="off">
+      <table >
+         <thead>
+            <th>Nombre Del alumno</th>
+            <th>Calificación</th>
+         </thead>
+         <tbody>
+            <tr>
+               <td><label for="trimester">TRIMESTRE</label></td>
+               
+               <td><input
+                 type="number"
+                 name="trimester"
+                 value="0"
+                 min="1"
+                 max="3"
+               /></td>
+             </tr>
+            <tr>
+               <td><label for="espanol">Español</label></td>
+               <td><input class='inputtxt' type="text" name="" id="espanol"></td>
+            </tr>
+            <tr>
+               <td><label for="mate">Matemáticas</label></td>
+               <td><input class='inputtxt'type="text" name="" id="mate"></td>
+            </tr>
+            
+               <td><label for="arts">Artes</label></td>
+               <td><input class='inputtxt' type="text" name="artes" id="arts"></td>
+            </tr>
+            <tr>
+               <td><label for="healty">Vida Saludable</label></td>
+               <td><input class='inputtxt'type="text" name="vidasal" id="healty"></td>
+            </tr>
+            <tr>
+               <td><label for="medio">Conocimiento del medio</label></td>
+               <td><input class='inputtxt'type="text" name="conocimiento" id="medio"></td>
+            </tr>
+            <tr>
+               <td><label for="civic">Formación civica</label></td>
+               <td><input class='inputtxt'type="text" name="formacion" id="civic"></td>
+            </tr>
+            <tr>
+               <td><label for="fisic">Educación Física</label></td>
+               <td><input class='inputtxt'type="text" name="educacion" id="mate"></td>
+            </tr>
+         </tbody>
+      </table>
+      <button type="submit" class="btn btn-primary btn-block">
+         Guardar
+     </button>
+   </form>
+
+
+   <form action="/savenotes/{{student.id}}" method="POST" autocomplete="off">
+      <table>
+         <thead>
+            <th class="arts"> Español</th>
+            <th>Matemáticas</th>
+            <th class='arts'>Artes</th>
+            <th>Vida Saludable</th>
+            <th>Conocimiento del Medio</th>
+            <th>Formación Civica</th>
+            <th>Educación Física</th>
+         </thead>
+         <tbody>
+            <tr>
+            <td><input class='inputtxt' type="text" name="español" id="espanol"></td>
+            <td><input class='inputtxt'type="text" name="matematicas" id="mate"></td>
+            <td><input class='inputtxt'type="text" name="artes" id="arts"></td>
+            <td><input class='inputtxt'type="text" name="vidasal" id="healty"></td>
+            <td><input class='inputtxt'type="text" name="conocimiento" id="conocimiento"></td>
+            <td><input class='inputtxt'type="text" name="formacion" id="formacion"></td>
+            <td><input class='inputtxt'type="text" name="educacion" id="educacion"></td>
+            </tr>
+            <tr>
+               <td><label for="trimester">TRIMESTRE</label></td>
+               
+               <td><input
+                 type="number"
+                 name="trimester"
+                 value="0"
+                 min="1"
+                 max="3"
+               /></td>
+               <td>
+                  <button type="submit" class="btn btn-primary btn-block">
+                     Guardar
+                 </button>
+               </td>
+            </tr>
+            
+         </tbody>
+         
+
+      </table>
+    
+   </form>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Contact Flask App</title>
+        <link rel="stylesheet" href="/static/bootstrap.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">Gestión de alumnos</a>
+              <a class="navbar-brand" href="/">Inicio</a>
+              <a class="navbar-brand" href="/">mis alumnos</a>
+              <a class="navbar-brand" href="/"></a>
+              <a class="navbar-brand" href="/"></a>
+              <a class="navbar-brand" href="/"></a>
+              <a class="navbar-brand" href="/logout">cerrar sesión</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <div class="container pt-4">
+
+
+          <div class="row">
+            <div class="col-md-4">
+                {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+
+
+            {% block body %}
+            {% endblock %} 
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+<script src= "{{url_for('static', filename = 'js/main.js')}}"></script>    
+</body>
+</html>
